@@ -1,28 +1,10 @@
-﻿var nomes = new List<string> { "Claudio", "Ana", "Felipe" };
-nomes.Add("Paulo");
-nomes.Add("Ricardo");
-nomes.Add("Ze Tadeu");
-nomes.Add("Bartolomeu");
-nomes.Add("Sebastião");
+﻿List<int> numeroFibo = new List<int>(){1, 1};
 
-nomes.Sort();
-
-
-
-
-foreach (var nome in nomes)
+while (numeroFibo.Count <= 30)
 {
-    Console.WriteLine($"Olá {nome.ToUpper()}!");
-}
-
-Console.WriteLine($"Este nome  {nomes[1]} está na posição 1");
-
-var index = nomes.IndexOf("Tadeu");
-if(index == -1)
-{
-    Console.WriteLine($"Objeto não encontrado, IndexOf retornará {index}");
-}
-else
-{
-    Console.WriteLine($"O nome {nomes[index]} está na posição {index}");
+    int numeroAnterior1 = numeroFibo[numeroFibo.Count- 1];
+    int numeroAnterior2 = numeroFibo[numeroFibo.Count- 2];
+    int item = numeroAnterior1+ numeroAnterior2;
+    numeroFibo.Add(item);
+    Console.WriteLine(item);
 }
