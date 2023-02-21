@@ -1,10 +1,5 @@
-﻿List<int> numeroFibo = new List<int>(){1, 1};
+﻿using ConsoleApp1;
+using System.Globalization;
 
-while (numeroFibo.Count <= 30)
-{
-    int numeroAnterior1 = numeroFibo[numeroFibo.Count- 1];
-    int numeroAnterior2 = numeroFibo[numeroFibo.Count- 2];
-    int item = numeroAnterior1+ numeroAnterior2;
-    numeroFibo.Add(item);
-    Console.WriteLine(item);
-}
+BankAccount account = new BankAccount(21, "marcos", 10000.0);
+Console.WriteLine($"The bank account number: {account.Number}, Name: {account.Name} has a balance of: R$ {account.Balance}");
