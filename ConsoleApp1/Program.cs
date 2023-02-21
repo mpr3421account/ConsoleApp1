@@ -1,8 +1,16 @@
 ﻿var nomes = new List<string> { "Claudio", "Ana", "Felipe" };
 nomes.Add("Paulo");
+nomes.Add("Ricardo");
+nomes.Add("Ze Tadeu");
+nomes.Add("Bartolomeu");
+nomes.Add("Sebastião");
+
+nomes.Sort();
 
 
-foreach(var nome in nomes)
+
+
+foreach (var nome in nomes)
 {
     Console.WriteLine($"Olá {nome.ToUpper()}!");
 }
