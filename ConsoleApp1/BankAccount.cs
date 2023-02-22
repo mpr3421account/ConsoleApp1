@@ -53,5 +53,16 @@ namespace ConsoleApp1
             Transaction transaction = new Transaction(-amount, date, observation);
             transactions.Add(transaction);
         }
+        public string TakeTransactions()
+        {
+            var resumeTransactions = new StringBuilder();
+            resumeTransactions.AppendLine("Date\t\tValue\tObservation");
+            foreach(var item in transactions)
+            {
+                resumeTransactions.AppendLine($"{item.Date.ToShortDateString()}\t{item.Value}\t{item.Observation}");
+            }
+            return resumeTransactions.ToString();
+        }
+        
     }
 }

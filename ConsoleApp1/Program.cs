@@ -21,3 +21,5 @@ Console.WriteLine($"The account is now with the amount of: R${account.Balance.To
 
 account.WithDraw(500.0, DateTime.Now, "Valor Sacado");
 Console.WriteLine($"The account is now with the amount of: R${account.Balance.ToString("F2", CultureInfo.InvariantCulture)}");
+
+Console.WriteLine(account.TakeTransactions());
