@@ -14,6 +14,7 @@ namespace ConsoleApp1
 
         public int Number { get; private set; }
         public string Name { get; set; }
+        
         public double Balance
         {
             get 
@@ -36,11 +37,19 @@ namespace ConsoleApp1
 
         public void Deposit(double amount, DateTime date, string observation)
         {
+            if(amount < 0)
+            {
+                throw new Exception("We can't accept negative values or zero.");
+            }
             Transaction transaction = new Transaction(amount, date, observation);
             transactions.Add(transaction);
         }
         public void WithDraw(double amount, DateTime date, string observation)
         {
+            if (amount < 0)
+            {
+                throw new Exception("We can't accept negative values or zero.");
+            }
             Transaction transaction = new Transaction(-amount, date, observation);
             transactions.Add(transaction);
         }
